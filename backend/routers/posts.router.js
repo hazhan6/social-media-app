@@ -43,9 +43,10 @@ router.post("/post/create", async (req, res) => {
 
 //Post Update
 router.post("/post/update", async (req, res) => {
+  console.log(req);
   try {
-    const _id = req.query.id;
-    const { content } = req.query;
+    const _id = req.body.id;
+    const { content } = req.body;
     const post = {
       content: content,
     };
